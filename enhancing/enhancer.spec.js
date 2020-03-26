@@ -1,9 +1,9 @@
 const { succeed, fail, repair, get } = require('./enhancer.js');
 // test away!
 const item = {
-	name: 'string',
+	name: '[+1] string',
 	durability: 90,
-	enhancement: 20
+	enhancement: 1
 };
 
 describe('Test Suite', () => {
@@ -49,6 +49,19 @@ describe('Test Suite', () => {
 			expect(fail(item)).toStrictEqual({
 				...item,
 				durability: item.durability - 10
+			});
+		});
+	});
+
+	describe('Get', () => {
+		it('should not alter name if enhancement is 0', () => {
+			expect(get(item)).toStrictEqual(item);
+		});
+
+		it('should add enhancement to name if greater than 0', () => {
+			expect(get(item)).toStrictEqual({
+				...item,
+				name: `[+${item.enhancement}] ${item.name}`
 			});
 		});
 	});

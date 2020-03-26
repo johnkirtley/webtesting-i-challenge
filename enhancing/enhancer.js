@@ -5,12 +5,6 @@ module.exports = {
 	get
 };
 
-const item = {
-	name: 'string',
-	durability: 90,
-	enhancement: 1
-};
-
 function succeed(item) {
 	let { enhancement } = item;
 
@@ -53,5 +47,3 @@ function get(item) {
 		return { ...item, name: `[+${enhancement}] ${name}` };
 	}
 }
-
-console.log(get(item));
