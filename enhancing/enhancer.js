@@ -5,6 +5,12 @@ module.exports = {
 	get
 };
 
+const item = {
+	name: 'string',
+	durability: 90,
+	enhancement: 1
+};
+
 function succeed(item) {
 	let { enhancement } = item;
 
@@ -38,5 +44,14 @@ function repair(item) {
 }
 
 function get(item) {
-	return { ...item };
+	const { name } = item;
+	const { enhancement } = item;
+
+	if (enhancement === 0) {
+		return { ...item };
+	} else {
+		return { ...item, name: `[+${enhancement}] ${name}` };
+	}
 }
+
+console.log(get(item));
