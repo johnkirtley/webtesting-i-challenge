@@ -2,7 +2,7 @@ module.exports = {
 	succeed,
 	fail,
 	repair,
-	get
+	get,
 };
 
 function succeed(item) {
@@ -17,8 +17,7 @@ function succeed(item) {
 }
 
 function fail(item) {
-	let { enhancement } = item;
-	let { durability } = item;
+	let { enhancement, durability } = item;
 
 	if (enhancement < 15) {
 		return { ...item, durability: durability - 5 };
@@ -26,7 +25,7 @@ function fail(item) {
 		return {
 			...item,
 			durability: durability - 10,
-			enhancement: enhancement - 1
+			enhancement: enhancement - 1,
 		};
 	} else {
 		return { ...item, durability: durability - 10 };
@@ -38,8 +37,7 @@ function repair(item) {
 }
 
 function get(item) {
-	const { name } = item;
-	const { enhancement } = item;
+	const { name, enhancement } = item;
 
 	if (enhancement === 0) {
 		return { ...item };
