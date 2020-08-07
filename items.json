@@ -1,0 +1,49 @@
+{
+	"items": [
+		{
+			"name": "string",
+			"durability": 90,
+			"enhancement": 20
+		},
+		{
+			"name": "string",
+			"durability": 90,
+			"enhancement": 20
+		},
+		{
+			"name": "string",
+			"durability": 90,
+			"enhancement": 22
+		},
+		{
+			"name": "string",
+			"durability": 90,
+			"enhancement": 20
+		},
+		{
+			"name": "string",
+			"durability": 90,
+			"enhancement": 14
+		},
+		{
+			"name": "string",
+			"durability": 90,
+			"enhancement": 17
+		},
+		{
+			"name": "string",
+			"durability": 90,
+			"enhancement": 16
+		},
+		{
+			"name": "string",
+			"durability": 90,
+			"enhancement": 0
+		},
+		{
+			"name": "string",
+			"durability": 90,
+			"enhancement": 20
+		}
+	]
+}
